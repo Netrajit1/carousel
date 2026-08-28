@@ -2,350 +2,326 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>NECTAR Partner Logo Belt</title>
-
+<title>Institute Logo Belt</title>
 
 <style>
 
-/* =========================================
-   PAGE
-========================================= */
-
-html,
-body {
-
+* {
     margin: 0;
-
     padding: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    overflow: hidden;
-
-    background: transparent;
-
-    font-family: Calibri, Arial, sans-serif;
-
+    box-sizing: border-box;
 }
 
-
-/* =========================================
-   BELT VIEWPORT
-========================================= */
-
-.logo-window {
-
-    width: 100%;
-
-    overflow: hidden;
-
+body {
     background: transparent;
-
-    padding: 10px 0;
-
+    font-family: Arial, sans-serif;
 }
 
+/* =========================
+   LOGO BELT
+========================= */
 
-/* =========================================
-   MOVING BELT
-========================================= */
+.logo-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+    background: transparent;
+}
 
-.logo-belt {
+/* Moving belt */
 
+.logo-track {
     display: flex;
-
     width: max-content;
-
-    animation:
-        moveBelt 55s linear infinite;
-
+    animation: logoScroll 35s linear infinite;
 }
 
-
-/* Pause when mouse is over the logos */
-
-.logo-window:hover .logo-belt {
-
-    animation-play-state: paused;
-
-}
-
-
-/* =========================================
-   EACH IDENTICAL GROUP
-========================================= */
+/* Groups */
 
 .logo-group {
-
     display: flex;
-
     align-items: center;
-
-    flex-shrink: 0;
-
 }
 
+/* Individual logo container */
 
-/* =========================================
-   LOGO CARD
-========================================= */
-
-.logo-card {
-
-    width: 209px;
-
-    height: 208px;
+.logo-box {
+    width: 145px;
+    height: 95px;
 
     margin: 0 18px;
 
-    background: #ffffff;
-
-    border: 1px solid #d6d6d6;
-
-    border-radius: 18px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
     flex-shrink: 0;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.10);
-
 }
 
+/* Logo */
 
-/* =========================================
-   LOGO IMAGE
-========================================= */
+.logo-box img {
+    width: auto;
+    height: auto;
 
-.logo-card img {
-
-    width: 180px;
-
-    height: 180px;
+    max-width: 120px;
+    max-height: 72px;
 
     object-fit: contain;
 
     display: block;
+}
+
+
+/* =========================
+   INFINITE SCROLL
+========================= */
+
+@keyframes logoScroll {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 
 }
 
 
-/* =========================================
-   CONTINUOUS HORIZONTAL MOVEMENT
-========================================= */
+/* =========================
+   HOVER PAUSE
+========================= */
 
-@keyframes moveBelt {
+.logo-section:hover .logo-track {
+    animation-play-state: paused;
+}
 
-    from {
 
-        transform: translateX(0);
+/* =========================
+   TABLET
+========================= */
 
+@media (max-width: 900px) {
+
+    .logo-box {
+        width: 125px;
+        height: 85px;
+        margin: 0 14px;
     }
 
-    to {
+    .logo-box img {
+        max-width: 100px;
+        max-height: 60px;
+    }
 
-        transform: translateX(-50%);
+}
 
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .logo-section {
+        padding: 10px 0;
+    }
+
+    .logo-box {
+        width: 105px;
+        height: 72px;
+        margin: 0 10px;
+        padding: 7px;
+    }
+
+    .logo-box img {
+        max-width: 85px;
+        max-height: 52px;
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
+<div class="logo-section">
 
-<div class="logo-window">
-
-
-<div class="logo-belt">
+<div class="logo-track">
 
 
 <!-- ==================================================
-     FIRST GROUP
+     FIRST SET
 ================================================== -->
 
 <div class="logo-group">
 
+    <div class="logo-box">
+        <img src="logos/ADTU_gHY.jpg" alt="ADTU">
+    </div>
 
-<div class="logo-card">
-<img src="Assam_University_Logo (1).png">
-</div>
+    <div class="logo-box">
+        <img src="logos/Bhattadev_University_logo.png" alt="Bhattadev University">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Cotton_University_logo%20%281%29.png" alt="Cotton University">
+    </div>
 
-<div class="logo-card">
-<img src="Cotton_Univ-removebg-preview.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/Dibrugarh-University-Logo.png" alt="Dibrugarh University">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Dimoria_College_Auto%20%281%29.jpg" alt="Dimoria College">
+    </div>
 
-<div class="logo-card">
-<img src="Dimoria_Logo-removebg-preview (1).png">
-</div>
+    <div class="logo-box">
+        <img src="logos/Donbosco_Smit.png" alt="Don Bosco">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Kohima_College.png" alt="Kohima College">
+    </div>
 
-<div class="logo-card">
-<img src="Don_Bosco_Univ_Logo_-removebg-preview.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/MTU_Logo.png" alt="MTU">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Mizoram_University.png" alt="Mizoram University">
+    </div>
 
-<div class="logo-card">
-<img src="Kohima_Science_College_Logo.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/NEHU.jpg" alt="NEHU">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Rajiv_Gandhi_University.jpg" alt="Rajiv Gandhi University">
+    </div>
 
-<div class="logo-card">
-<img src="Mizoram_University_logo.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/SGC%20%281%29.jpg" alt="SGC">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/St.ANThony%20%281%29.jpg" alt="St. Anthony">
+    </div>
 
-<div class="logo-card">
-<img src="North-Eastern_Hill_University_Logo.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/TU.jpg" alt="Tezpur University">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Tripura_Uni_Tech%20%281%29.jpg" alt="Tripura University">
+    </div>
 
-<div class="logo-card">
-<img src="Prag_Logo-removebg-preview.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/cit-logo.png" alt="CIT">
+    </div>
 
-
-<div class="logo-card">
-<img src="Stanthony__Logo.png">
-</div>
-
-
-<div class="logo-card">
-<img src="Tezpur_University_logo.png">
-</div>
-
-
-<div class="logo-card">
-<img src="du-removebg-preview.png">
-</div>
-
-
-<div class="logo-card">
-<img src="mtu.png">
-</div>
-
-
-<div class="logo-card">
-<img src="rgu-logo.png">
-</div>
-
-
-<div class="logo-card">
-<img src="tit_Logo-removebg-preview.png">
-</div>
-
+    <div class="logo-box">
+        <img src="logos/prag-logo-n.png" alt="Prag">
+    </div>
 
 </div>
-
 
 
 <!-- ==================================================
-     SECOND IDENTICAL GROUP
-     This creates the endless effect
+     DUPLICATE SET
+     Required for continuous animation
 ================================================== -->
 
 <div class="logo-group">
 
+    <div class="logo-box">
+        <img src="logos/ADTU_gHY.jpg" alt="ADTU">
+    </div>
 
-<div class="logo-card">
-<img src="Assam_University_Logo (1).png">
-</div>
+    <div class="logo-box">
+        <img src="logos/Bhattadev_University_logo.png" alt="Bhattadev University">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Cotton_University_logo%20%281%29.png" alt="Cotton University">
+    </div>
 
-<div class="logo-card">
-<img src="Cotton_Univ-removebg-preview.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/Dibrugarh-University-Logo.png" alt="Dibrugarh University">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Dimoria_College_Auto%20%281%29.jpg" alt="Dimoria College">
+    </div>
 
-<div class="logo-card">
-<img src="Dimoria_Logo-removebg-preview (1).png">
-</div>
+    <div class="logo-box">
+        <img src="logos/Donbosco_Smit.png" alt="Don Bosco">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Kohima_College.png" alt="Kohima College">
+    </div>
 
-<div class="logo-card">
-<img src="Don_Bosco_Univ_Logo_-removebg-preview.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/MTU_Logo.png" alt="MTU">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Mizoram_University.png" alt="Mizoram University">
+    </div>
 
-<div class="logo-card">
-<img src="Kohima_Science_College_Logo.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/NEHU.jpg" alt="NEHU">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Rajiv_Gandhi_University.jpg" alt="Rajiv Gandhi University">
+    </div>
 
-<div class="logo-card">
-<img src="Mizoram_University_logo.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/SGC%20%281%29.jpg" alt="SGC">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/St.ANThony%20%281%29.jpg" alt="St. Anthony">
+    </div>
 
-<div class="logo-card">
-<img src="North-Eastern_Hill_University_Logo.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/TU.jpg" alt="Tezpur University">
+    </div>
 
+    <div class="logo-box">
+        <img src="logos/Tripura_Uni_Tech%20%281%29.jpg" alt="Tripura University">
+    </div>
 
-<div class="logo-card">
-<img src="Prag_Logo-removebg-preview.png">
-</div>
+    <div class="logo-box">
+        <img src="logos/cit-logo.png" alt="CIT">
+    </div>
 
-
-<div class="logo-card">
-<img src="Stanthony__Logo.png">
-</div>
-
-
-<div class="logo-card">
-<img src="Tezpur_University_logo.png">
-</div>
-
-
-<div class="logo-card">
-<img src="du-removebg-preview.png">
-</div>
-
-
-<div class="logo-card">
-<img src="mtu.png">
-</div>
-
-
-<div class="logo-card">
-<img src="rgu-logo.png">
-</div>
-
-
-<div class="logo-card">
-<img src="tit_Logo-removebg-preview.png">
-</div>
-
+    <div class="logo-box">
+        <img src="logos/prag-logo-n.png" alt="Prag">
+    </div>
 
 </div>
 
 
 </div>
-
 </div>
-
 
 </body>
-
 </html>
