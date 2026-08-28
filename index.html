@@ -4,37 +4,44 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Continuous Dashboard Belt</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>NECTAR Partner Logo Belt</title>
+
 
 <style>
 
-/* =========================
-   BASIC SETTINGS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =========================================
+   PAGE
+========================================= */
 
 html,
 body {
+
+    margin: 0;
+
+    padding: 0;
+
     width: 100%;
+
     height: 100%;
+
     overflow: hidden;
+
     background: transparent;
+
     font-family: Calibri, Arial, sans-serif;
+
 }
 
 
-/* =========================
-   BELT CONTAINER
-========================= */
+/* =========================================
+   BELT VIEWPORT
+========================================= */
 
-.belt-container {
+.logo-window {
 
     width: 100%;
 
@@ -47,35 +54,36 @@ body {
 }
 
 
-/* =========================
+/* =========================================
    MOVING BELT
-========================= */
+========================================= */
 
-.belt {
+.logo-belt {
 
     display: flex;
 
     width: max-content;
 
-    animation: continuousScroll 55s linear infinite;
+    animation:
+        moveBelt 55s linear infinite;
 
 }
 
 
-/* Pause when mouse is placed over belt */
+/* Pause when mouse is over the logos */
 
-.belt:hover {
+.logo-window:hover .logo-belt {
 
     animation-play-state: paused;
 
 }
 
 
-/* =========================
-   EACH SET OF ITEMS
-========================= */
+/* =========================================
+   EACH IDENTICAL GROUP
+========================================= */
 
-.belt-set {
+.logo-group {
 
     display: flex;
 
@@ -86,17 +94,23 @@ body {
 }
 
 
-/* =========================
-   DASHBOARD BUTTON
-========================= */
+/* =========================================
+   LOGO CARD
+========================================= */
 
-.dashboard-button {
+.logo-card {
 
-    width: 260px;
+    width: 209px;
 
-    height: 55px;
+    height: 208px;
 
     margin: 0 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #d6d6d6;
+
+    border-radius: 18px;
 
     display: flex;
 
@@ -104,79 +118,46 @@ body {
 
     justify-content: center;
 
-    gap: 12px;
-
-    background: #ffffff;
-
-    border: 1.5px solid #0B5ED7;
-
-    border-radius: 12px;
-
-    color: #0B5ED7;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    white-space: nowrap;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-
     flex-shrink: 0;
 
-    transition: all 0.25s ease;
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.10);
 
 }
 
 
-/* Hover effect */
+/* =========================================
+   LOGO IMAGE
+========================================= */
 
-.dashboard-button:hover {
+.logo-card img {
 
-    background: #0B5ED7;
+    width: 180px;
 
-    color: #ffffff;
+    height: 180px;
 
-    transform: translateY(-2px);
+    object-fit: contain;
 
-    box-shadow: 0 7px 18px rgba(0,0,0,0.18);
-
-}
-
-
-/* Icon */
-
-.dashboard-icon {
-
-    font-size: 22px;
+    display: block;
 
 }
 
 
-/* Arrow */
+/* =========================================
+   CONTINUOUS HORIZONTAL MOVEMENT
+========================================= */
 
-.dashboard-arrow {
+@keyframes moveBelt {
 
-    font-size: 22px;
-
-}
-
-
-/* =========================
-   ENDLESS ANIMATION
-========================= */
-
-@keyframes continuousScroll {
-
-    0% {
+    from {
 
         transform: translateX(0);
 
     }
 
-    100% {
+    to {
 
         transform: translateX(-50%);
 
@@ -192,160 +173,175 @@ body {
 <body>
 
 
-<div class="belt-container">
+<div class="logo-window">
 
-    <div class="belt">
 
+<div class="logo-belt">
 
-        <!-- =================================
-             FIRST SET
-        ================================== -->
 
-        <div class="belt-set">
+<!-- ==================================================
+     FIRST GROUP
+================================================== -->
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-group">
 
-                <span class="dashboard-icon">📊</span>
 
-                <span>Project Dashboard</span>
+<div class="logo-card">
+<img src="Assam_University_Logo (1).png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="Cotton_Univ-removebg-preview.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="Dimoria_Logo-removebg-preview (1).png">
+</div>
 
-                <span class="dashboard-icon">📈</span>
 
-                <span>Interactive Dashboard</span>
+<div class="logo-card">
+<img src="Don_Bosco_Univ_Logo_-removebg-preview.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="Kohima_Science_College_Logo.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="Mizoram_University_logo.png">
+</div>
 
-                <span class="dashboard-icon">🗺️</span>
 
-                <span>GIS Dashboard</span>
+<div class="logo-card">
+<img src="North-Eastern_Hill_University_Logo.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="Prag_Logo-removebg-preview.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="Stanthony__Logo.png">
+</div>
 
-                <span class="dashboard-icon">📊</span>
 
-                <span>Project Insights</span>
+<div class="logo-card">
+<img src="Tezpur_University_logo.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="du-removebg-preview.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="mtu.png">
+</div>
 
-                <span class="dashboard-icon">🌐</span>
 
-                <span>Explore Data</span>
+<div class="logo-card">
+<img src="rgu-logo.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="tit_Logo-removebg-preview.png">
+</div>
 
-        </div>
 
+</div>
 
 
-        <!-- =================================
-             SECOND IDENTICAL SET
-             REQUIRED FOR ENDLESS LOOP
-        ================================== -->
 
-        <div class="belt-set">
+<!-- ==================================================
+     SECOND IDENTICAL GROUP
+     This creates the endless effect
+================================================== -->
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-group">
 
-                <span class="dashboard-icon">📊</span>
 
-                <span>Project Dashboard</span>
+<div class="logo-card">
+<img src="Assam_University_Logo (1).png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="Cotton_Univ-removebg-preview.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="Dimoria_Logo-removebg-preview (1).png">
+</div>
 
-                <span class="dashboard-icon">📈</span>
 
-                <span>Interactive Dashboard</span>
+<div class="logo-card">
+<img src="Don_Bosco_Univ_Logo_-removebg-preview.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="Kohima_Science_College_Logo.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="Mizoram_University_logo.png">
+</div>
 
-                <span class="dashboard-icon">🗺️</span>
 
-                <span>GIS Dashboard</span>
+<div class="logo-card">
+<img src="North-Eastern_Hill_University_Logo.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="Prag_Logo-removebg-preview.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="Stanthony__Logo.png">
+</div>
 
-                <span class="dashboard-icon">📊</span>
 
-                <span>Project Insights</span>
+<div class="logo-card">
+<img src="Tezpur_University_logo.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="du-removebg-preview.png">
+</div>
 
 
-            <a class="dashboard-button"
-               href="YOUR-DASHBOARD-LINK"
-               target="_blank">
+<div class="logo-card">
+<img src="mtu.png">
+</div>
 
-                <span class="dashboard-icon">🌐</span>
 
-                <span>Explore Data</span>
+<div class="logo-card">
+<img src="rgu-logo.png">
+</div>
 
-                <span class="dashboard-arrow">→</span>
 
-            </a>
+<div class="logo-card">
+<img src="tit_Logo-removebg-preview.png">
+</div>
 
-        </div>
 
+</div>
 
-    </div>
+
+</div>
 
 </div>
 
