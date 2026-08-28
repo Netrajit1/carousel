@@ -17,7 +17,7 @@ html, body {
 }
 
 /* =========================
-   LOGO BELT
+   BELT
 ========================= */
 
 .logo-belt {
@@ -31,7 +31,7 @@ html, body {
 }
 
 /* =========================
-   MOVING TRACK
+   TRACK
 ========================= */
 
 .logo-track {
@@ -48,16 +48,17 @@ html, body {
 
 /* =========================
    LOGO BOX
-   EXACT SIZE: 140 × 100 PX
+   EXACTLY 140 × 100 PX
 ========================= */
 
 .logo-item {
     width: 140px;
     height: 100px;
 
-    margin: 0 15px;
+    margin-left: 15px;
+    margin-right: 15px;
 
-    flex-shrink: 0;
+    flex: 0 0 140px;
 
     display: flex;
     align-items: center;
@@ -73,12 +74,15 @@ html, body {
 }
 
 /* =========================
-   LOGO IMAGE
+   LARGE LOGOS
 ========================= */
 
 .logo-item img {
-    width: 120px;
-    height: 80px;
+    width: auto;
+    height: auto;
+
+    max-width: 138px;
+    max-height: 98px;
 
     object-fit: contain;
 
@@ -86,19 +90,17 @@ html, body {
 }
 
 /* =========================
-   INFINITE SCROLL
+   INFINITE MOVEMENT
 ========================= */
 
 @keyframes scroll {
-
-    from {
+    0% {
         transform: translateX(0);
     }
 
-    to {
+    100% {
         transform: translateX(-50%);
     }
-
 }
 
 /* =========================
@@ -115,18 +117,20 @@ html, body {
         width: 140px;
         height: 100px;
 
-        margin: 0 10px;
+        flex-basis: 140px;
+
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .logo-item img {
-        width: 120px;
-        height: 80px;
+        max-width: 138px;
+        max-height: 98px;
     }
 
     .logo-track {
         animation-duration: 35s;
     }
-
 }
 </style>
 
@@ -140,76 +144,144 @@ html, body {
 
 <!-- ================= FIRST SET ================= -->
 
-<div class="logo-item"><img src="./ADTU_gHY.jpg" alt="ADTU"></div>
+<div class="logo-item">
+<img src="./ADTU_gHY.jpg" alt="ADTU">
+</div>
 
-<div class="logo-item"><img src="./Bhattadev_University_logo.png" alt="Bhattadev University"></div>
+<div class="logo-item">
+<img src="./Bhattadev_University_logo.png" alt="Bhattadev University">
+</div>
 
-<div class="logo-item"><img src="./Cotton University_logo (1).png" alt="Cotton University"></div>
+<div class="logo-item">
+<img src="./Cotton University_logo (1).png" alt="Cotton University">
+</div>
 
-<div class="logo-item"><img src="./Dibrugarh-University-Logo.png" alt="Dibrugarh University"></div>
+<div class="logo-item">
+<img src="./Dibrugarh-University-Logo.png" alt="Dibrugarh University">
+</div>
 
-<div class="logo-item"><img src="./Dimoria_College_Auto (1).jpg" alt="Dimoria College"></div>
+<div class="logo-item">
+<img src="./Dimoria_College_Auto (1).jpg" alt="Dimoria College">
+</div>
 
-<div class="logo-item"><img src="./Donbosco_Smit.png" alt="Don Bosco"></div>
+<div class="logo-item">
+<img src="./Donbosco_Smit.png" alt="Don Bosco">
+</div>
 
-<div class="logo-item"><img src="./Kohima_College.png" alt="Kohima College"></div>
+<div class="logo-item">
+<img src="./Kohima_College.png" alt="Kohima College">
+</div>
 
-<div class="logo-item"><img src="./MTU_Logo.png" alt="MTU"></div>
+<div class="logo-item">
+<img src="./MTU_Logo.png" alt="MTU">
+</div>
 
-<div class="logo-item"><img src="./Mizoram_University.png" alt="Mizoram University"></div>
+<div class="logo-item">
+<img src="./Mizoram_University.png" alt="Mizoram University">
+</div>
 
-<div class="logo-item"><img src="./NEHU.jpg" alt="NEHU"></div>
+<div class="logo-item">
+<img src="./NEHU.jpg" alt="NEHU">
+</div>
 
-<div class="logo-item"><img src="./Rajiv Gandhi University.jpg" alt="Rajiv Gandhi University"></div>
+<div class="logo-item">
+<img src="./Rajiv Gandhi University.jpg" alt="Rajiv Gandhi University">
+</div>
 
-<div class="logo-item"><img src="./SGC (1).jpg" alt="SGC"></div>
+<div class="logo-item">
+<img src="./SGC (1).jpg" alt="SGC">
+</div>
 
-<div class="logo-item"><img src="./St.Anthony.jpg" alt="St Anthony"></div>
+<div class="logo-item">
+<img src="./St.Anthony.jpg" alt="St Anthony">
+</div>
 
-<div class="logo-item"><img src="./TU.jpg" alt="Tezpur University"></div>
+<div class="logo-item">
+<img src="./TU.jpg" alt="Tezpur University">
+</div>
 
-<div class="logo-item"><img src="./Tripura Uni_Tech (1).jpg" alt="Tripura University"></div>
+<div class="logo-item">
+<img src="./Tripura Uni_Tech (1).jpg" alt="Tripura University">
+</div>
 
-<div class="logo-item"><img src="./cit-logo.png" alt="CIT"></div>
+<div class="logo-item">
+<img src="./cit-logo.png" alt="CIT">
+</div>
 
-<div class="logo-item"><img src="./prag-logo-n.png" alt="Pragjyotish"></div>
+<div class="logo-item">
+<img src="./prag-logo-n.png" alt="Pragjyotish">
+</div>
 
 
 <!-- ================= DUPLICATE SET ================= -->
 
-<div class="logo-item"><img src="./ADTU_gHY.jpg" alt="ADTU"></div>
+<div class="logo-item">
+<img src="./ADTU_gHY.jpg" alt="ADTU">
+</div>
 
-<div class="logo-item"><img src="./Bhattadev_University_logo.png" alt="Bhattadev University"></div>
+<div class="logo-item">
+<img src="./Bhattadev_University_logo.png" alt="Bhattadev University">
+</div>
 
-<div class="logo-item"><img src="./Cotton University_logo (1).png" alt="Cotton University"></div>
+<div class="logo-item">
+<img src="./Cotton University_logo (1).png" alt="Cotton University">
+</div>
 
-<div class="logo-item"><img src="./Dibrugarh-University-Logo.png" alt="Dibrugarh University"></div>
+<div class="logo-item">
+<img src="./Dibrugarh-University-Logo.png" alt="Dibrugarh University">
+</div>
 
-<div class="logo-item"><img src="./Dimoria_College_Auto (1).jpg" alt="Dimoria College"></div>
+<div class="logo-item">
+<img src="./Dimoria_College_Auto (1).jpg" alt="Dimoria College">
+</div>
 
-<div class="logo-item"><img src="./Donbosco_Smit.png" alt="Don Bosco"></div>
+<div class="logo-item">
+<img src="./Donbosco_Smit.png" alt="Don Bosco">
+</div>
 
-<div class="logo-item"><img src="./Kohima_College.png" alt="Kohima College"></div>
+<div class="logo-item">
+<img src="./Kohima_College.png" alt="Kohima College">
+</div>
 
-<div class="logo-item"><img src="./MTU_Logo.png" alt="MTU"></div>
+<div class="logo-item">
+<img src="./MTU_Logo.png" alt="MTU">
+</div>
 
-<div class="logo-item"><img src="./Mizoram_University.png" alt="Mizoram University"></div>
+<div class="logo-item">
+<img src="./Mizoram_University.png" alt="Mizoram University">
+</div>
 
-<div class="logo-item"><img src="./NEHU.jpg" alt="NEHU"></div>
+<div class="logo-item">
+<img src="./NEHU.jpg" alt="NEHU">
+</div>
 
-<div class="logo-item"><img src="./Rajiv Gandhi University.jpg" alt="Rajiv Gandhi University"></div>
+<div class="logo-item">
+<img src="./Rajiv Gandhi University.jpg" alt="Rajiv Gandhi University">
+</div>
 
-<div class="logo-item"><img src="./SGC (1).jpg" alt="SGC"></div>
+<div class="logo-item">
+<img src="./SGC (1).jpg" alt="SGC">
+</div>
 
-<div class="logo-item"><img src="./St.Anthony.jpg" alt="St Anthony"></div>
+<div class="logo-item">
+<img src="./St.Anthony.jpg" alt="St Anthony">
+</div>
 
-<div class="logo-item"><img src="./TU.jpg" alt="Tezpur University"></div>
+<div class="logo-item">
+<img src="./TU.jpg" alt="Tezpur University">
+</div>
 
-<div class="logo-item"><img src="./Tripura Uni_Tech (1).jpg" alt="Tripura University"></div>
+<div class="logo-item">
+<img src="./Tripura Uni_Tech (1).jpg" alt="Tripura University">
+</div>
 
-<div class="logo-item"><img src="./cit-logo.png" alt="CIT"></div>
+<div class="logo-item">
+<img src="./cit-logo.png" alt="CIT">
+</div>
 
-<div class="logo-item"><img src="./prag-logo-n.png" alt="Pragjyotish"></div>
+<div class="logo-item">
+<img src="./prag-logo-n.png" alt="Pragjyotish">
+</div>
 
 </div>
 </div>
