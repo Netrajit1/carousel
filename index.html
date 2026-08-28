@@ -1,162 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Institute Logo Belt</title>
-
 <style>
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
     background: transparent;
-    font-family: Arial, sans-serif;
 }
-
-/* =========================
-   LOGO BELT
-========================= */
 
 .logo-section {
     width: 100%;
     overflow: hidden;
     padding: 15px 0;
-    background: transparent;
 }
-
-/* Moving belt */
 
 .logo-track {
     display: flex;
     width: max-content;
-    animation: logoScroll 35s linear infinite;
+    animation: scroll 40s linear infinite;
 }
-
-/* Groups */
 
 .logo-group {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
-/* Individual logo container */
-
 .logo-box {
-    width: 145px;
-    height: 95px;
-
-    margin: 0 18px;
+    width: 150px;
+    height: 100px;
+    margin: 0 20px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: #ffffff;
-
+    background: white;
     border-radius: 10px;
 
-    padding: 10px;
+    padding: 12px;
 
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
 
     flex-shrink: 0;
 }
 
-/* Logo */
-
 .logo-box img {
+    max-width: 120px;
+    max-height: 75px;
+
     width: auto;
     height: auto;
 
-    max-width: 120px;
-    max-height: 72px;
-
     object-fit: contain;
-
-    display: block;
 }
 
+/* Continuous movement */
 
-/* =========================
-   INFINITE SCROLL
-========================= */
+@keyframes scroll {
 
-@keyframes logoScroll {
-
-    0% {
+    from {
         transform: translateX(0);
     }
 
-    100% {
+    to {
         transform: translateX(-50%);
     }
 
 }
 
-
-/* =========================
-   HOVER PAUSE
-========================= */
+/* Pause */
 
 .logo-section:hover .logo-track {
     animation-play-state: paused;
 }
 
+/* Mobile */
 
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
+@media(max-width:600px) {
 
     .logo-box {
-        width: 125px;
-        height: 85px;
-        margin: 0 14px;
-    }
-
-    .logo-box img {
-        max-width: 100px;
-        max-height: 60px;
-    }
-
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    .logo-section {
-        padding: 10px 0;
-    }
-
-    .logo-box {
-        width: 105px;
-        height: 72px;
+        width: 110px;
+        height: 75px;
         margin: 0 10px;
-        padding: 7px;
+        padding: 8px;
     }
 
     .logo-box img {
-        max-width: 85px;
-        max-height: 52px;
+        max-width: 90px;
+        max-height: 55px;
     }
 
 }
-
 </style>
 </head>
-
 
 <body>
 
@@ -164,161 +110,154 @@ body {
 
 <div class="logo-track">
 
-
-<!-- ==================================================
-     FIRST SET
-================================================== -->
+<!-- FIRST SET -->
 
 <div class="logo-group">
 
-    <div class="logo-box">
-        <img src="logos/ADTU_gHY.jpg" alt="ADTU">
-    </div>
+<div class="logo-box">
+<img src="./logos/ADTU_gHY.jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Bhattadev_University_logo.png" alt="Bhattadev University">
-    </div>
+<div class="logo-box">
+<img src="./logos/Bhattadev_University_logo.png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Cotton_University_logo%20%281%29.png" alt="Cotton University">
-    </div>
+<div class="logo-box">
+<img src="./logos/Cotton_University_logo%20(1).png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Dibrugarh-University-Logo.png" alt="Dibrugarh University">
-    </div>
+<div class="logo-box">
+<img src="./logos/Dibrugarh-University-Logo.png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Dimoria_College_Auto%20%281%29.jpg" alt="Dimoria College">
-    </div>
+<div class="logo-box">
+<img src="./logos/Dimoria_College_Auto%20(1).jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Donbosco_Smit.png" alt="Don Bosco">
-    </div>
+<div class="logo-box">
+<img src="./logos/Donbosco_Smit.png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Kohima_College.png" alt="Kohima College">
-    </div>
+<div class="logo-box">
+<img src="./logos/Kohima_College.png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/MTU_Logo.png" alt="MTU">
-    </div>
+<div class="logo-box">
+<img src="./logos/MTU_Logo.png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Mizoram_University.png" alt="Mizoram University">
-    </div>
+<div class="logo-box">
+<img src="./logos/Mizoram_University.png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/NEHU.jpg" alt="NEHU">
-    </div>
+<div class="logo-box">
+<img src="./logos/NEHU.jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Rajiv_Gandhi_University.jpg" alt="Rajiv Gandhi University">
-    </div>
+<div class="logo-box">
+<img src="./logos/Rajiv_Gandhi_University.jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/SGC%20%281%29.jpg" alt="SGC">
-    </div>
+<div class="logo-box">
+<img src="./logos/SGC%20(1).jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/St.ANThony%20%281%29.jpg" alt="St. Anthony">
-    </div>
+<div class="logo-box">
+<img src="./logos/St.ANThony%20(1).jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/TU.jpg" alt="Tezpur University">
-    </div>
+<div class="logo-box">
+<img src="./logos/TU.jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/Tripura_Uni_Tech%20%281%29.jpg" alt="Tripura University">
-    </div>
+<div class="logo-box">
+<img src="./logos/Tripura_Uni_Tech%20(1).jpg">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/cit-logo.png" alt="CIT">
-    </div>
+<div class="logo-box">
+<img src="./logos/cit-logo.png">
+</div>
 
-    <div class="logo-box">
-        <img src="logos/prag-logo-n.png" alt="Prag">
-    </div>
+<div class="logo-box">
+<img src="./logos/prag-logo-n.png">
+</div>
 
 </div>
 
 
-<!-- ==================================================
-     DUPLICATE SET
-     Required for continuous animation
-================================================== -->
+<!-- SECOND SET -->
 
 <div class="logo-group">
 
-    <div class="logo-box">
-        <img src="logos/ADTU_gHY.jpg" alt="ADTU">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Bhattadev_University_logo.png" alt="Bhattadev University">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Cotton_University_logo%20%281%29.png" alt="Cotton University">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Dibrugarh-University-Logo.png" alt="Dibrugarh University">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Dimoria_College_Auto%20%281%29.jpg" alt="Dimoria College">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Donbosco_Smit.png" alt="Don Bosco">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Kohima_College.png" alt="Kohima College">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/MTU_Logo.png" alt="MTU">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Mizoram_University.png" alt="Mizoram University">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/NEHU.jpg" alt="NEHU">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Rajiv_Gandhi_University.jpg" alt="Rajiv Gandhi University">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/SGC%20%281%29.jpg" alt="SGC">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/St.ANThony%20%281%29.jpg" alt="St. Anthony">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/TU.jpg" alt="Tezpur University">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/Tripura_Uni_Tech%20%281%29.jpg" alt="Tripura University">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/cit-logo.png" alt="CIT">
-    </div>
-
-    <div class="logo-box">
-        <img src="logos/prag-logo-n.png" alt="Prag">
-    </div>
-
+<div class="logo-box">
+<img src="./logos/ADTU_gHY.jpg">
 </div>
 
+<div class="logo-box">
+<img src="./logos/Bhattadev_University_logo.png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Cotton_University_logo%20(1).png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Dibrugarh-University-Logo.png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Dimoria_College_Auto%20(1).jpg">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Donbosco_Smit.png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Kohima_College.png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/MTU_Logo.png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Mizoram_University.png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/NEHU.jpg">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Rajiv_Gandhi_University.jpg">
+</div>
+
+<div class="logo-box">
+<img src="./logos/SGC%20(1).jpg">
+</div>
+
+<div class="logo-box">
+<img src="./logos/St.ANThony%20(1).jpg">
+</div>
+
+<div class="logo-box">
+<img src="./logos/TU.jpg">
+</div>
+
+<div class="logo-box">
+<img src="./logos/Tripura_Uni_Tech%20(1).jpg">
+</div>
+
+<div class="logo-box">
+<img src="./logos/cit-logo.png">
+</div>
+
+<div class="logo-box">
+<img src="./logos/prag-logo-n.png">
+</div>
+
+</div>
 
 </div>
 </div>
